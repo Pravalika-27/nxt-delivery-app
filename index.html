@@ -1,25 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Delivery Request</title>
+  <meta charset="UTF-8">
+  <title>NXT Delivery Request</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background-color: #25D366;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+    button:hover {
+      background-color: #20b85c;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 <body>
 
-  <h2>NXT Delivery Request Form</h2>
+  <div class="container">
+    <h2>NXT Delivery Request Form</h2>
 
-  <label for="from">From:</label><br>
-  <input type="text" id="from" placeholder="Enter pickup location"><br><br>
+    <label for="from">From:</label>
+    <input type="text" id="from" placeholder="Enter pickup location">
 
-  <label for="to">To:</label><br>
-  <input type="text" id="to" placeholder="Enter drop location"><br><br>
+    <label for="to">To:</label>
+    <input type="text" id="to" placeholder="Enter drop location">
 
-  <label for="items">Items:</label><br>
-  <input type="text" id="items" placeholder="List the items"><br><br>
+    <label for="items">Items:</label>
+    <input type="text" id="items" placeholder="List the items">
 
-  <label for="weight">Weight (in kg):</label><br>
-  <input type="number" id="weight" placeholder="Enter total weight"><br><br>
+    <label for="weight">Weight (in kg):</label>
+    <input type="number" id="weight" placeholder="Enter total weight">
 
-  <button onclick="sendToWhatsApp()">Send to WhatsApp</button>
+    <button onclick="sendToWhatsApp()">Send to WhatsApp</button>
+  </div>
 
   <script>
     function sendToWhatsApp() {
@@ -35,9 +74,9 @@
 
       const message = `*NXT Delivery Request*\n\nFrom: ${from}\nTo: ${to}\nItems: ${items}\nWeight: ${weight} kg`;
       const encodedMsg = encodeURIComponent(message);
-      const phone = '919391332253'; // Replace with your phone number
+      const phone = '9553281751'; // Your WhatsApp number
 
-      window.open(`https://wa.me/${phone}?text=${encodedMsg}`, '_blank');
+      window.open(`https://wa.me/91${phone}?text=${encodedMsg}`, '_blank');
     }
   </script>
 
