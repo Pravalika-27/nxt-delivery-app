@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,14 +27,6 @@
       font-weight: bold;
       cursor: pointer;
       border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    button img {
-      width: 20px;
-      height: 20px;
-      margin-right: 8px;
     }
     button:hover {
       background-color: #20b85c;
@@ -65,10 +58,7 @@
     <label for="weight">Weight (in kg):</label>
     <input type="number" id="weight" placeholder="Enter total weight">
 
-    <button onclick="sendToWhatsApp()">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
-      Send to WhatsApp
-    </button>
+    <button onclick="sendToWhatsApp()">Send to WhatsApp</button>
   </div>
 
   <script>
@@ -85,7 +75,7 @@
 
       const message = `*NXT Delivery Request*\n\nFrom: ${from}\nTo: ${to}\nItems: ${items}\nWeight: ${weight} kg`;
       const encodedMsg = encodeURIComponent(message);
-      const phone = '9553281751';
+      const phone = '9553281751'; // Your WhatsApp number
 
       window.open(`https://wa.me/91${phone}?text=${encodedMsg}`, '_blank');
     }
@@ -93,4 +83,3 @@
 
 </body>
 </html>
-
