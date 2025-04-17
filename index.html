@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,46 +7,98 @@
   <title>NXT Delivery Request</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      padding: 20px;
-    }
-    h2 {
+      background-color: #e0f7f1; /* Light mint green */
       color: #333;
     }
+
+    .header {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .header img {
+      height: 60px;
+      margin-right: 15px;
+    }
+
+    .header h1 {
+      font-size: 26px;
+      color: #2a775d;
+    }
+
+    .container {
+      max-width: 450px;
+      margin: 50px auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      text-align: center;
+      color: #2a775d;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
     input, button {
       width: 100%;
       padding: 10px;
-      margin-top: 10px;
-      margin-bottom: 20px;
+      margin-top: 5px;
       border: 1px solid #ccc;
       border-radius: 6px;
     }
+
     button {
       background-color: #25D366;
       color: white;
       font-weight: bold;
-      cursor: pointer;
       border: none;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
     }
+
     button:hover {
       background-color: #20b85c;
     }
-    .container {
+
+    .items-gallery {
+      display: flex;
+      justify-content: space-around;
+      margin: 30px auto;
       max-width: 400px;
-      margin: auto;
-      background: white;
-      padding: 30px;
+    }
+
+    .items-gallery img {
+      height: 80px;
+      width: auto;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 1px 6px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h2>NXT Delivery Request Form</h2>
+  <div class="header">
+    <img src="logo.jpg" alt="NXT Logo">
+    <h1>NXT Delivery</h1>
+  </div>
 
+  <div class="container">
+    <h2>Delivery Request Form</h2>
     <label for="from">From:</label>
     <input type="text" id="from" placeholder="Enter pickup location">
 
@@ -58,6 +112,12 @@
     <input type="number" id="weight" placeholder="Enter total weight">
 
     <button onclick="sendToWhatsApp()">Send to WhatsApp</button>
+  </div>
+
+  <div class="items-gallery">
+    <img src="item1.png" alt="Item 1">
+    <img src="item2.png" alt="Item 2">
+    <img src="item3.png" alt="Item 3">
   </div>
 
   <script>
@@ -74,7 +134,7 @@
 
       const message = `*NXT Delivery Request*\n\nFrom: ${from}\nTo: ${to}\nItems: ${items}\nWeight: ${weight} kg`;
       const encodedMsg = encodeURIComponent(message);
-      const phone = '9553281751'; // Your WhatsApp number
+      const phone = '9553281751';
 
       window.open(`https://wa.me/91${phone}?text=${encodedMsg}`, '_blank');
     }
