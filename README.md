@@ -1,26 +1,33 @@
-NXT Delivery
-Welcome to NXT Delivery, where we deliver any item from any place to any destination using the fastest technology available.
+# NXT Delivery 🚚✨
 
-Technologies Used
-Static Website Deployment: GitHub Pages
+**NXT Delivery** is a static website that provides a futuristic solution to deliver any item from any place to any destination using the fastest technology available.
 
-Frontend Development: HTML, CSS, JavaScript
+Hosted with ❤️ on **GitHub Pages**.
 
-Version Control: Git
+---
 
-Features
-Fast and reliable delivery service
+## 🌐 Live Demo
 
-Easy tracking of deliveries
+👉 [Click here to visit the website]: https://pravalika-27.github.io/nxt-delivery-app/
 
-Responsive design for seamless user experience
+---
 
-Getting Started
-To view the website:
+## 🚀 Technologies Used
 
-Clone the repository: git clone https://github.com/your-username/nxt-delivery.git
+- **GitHub Pages** – for static website hosting
+- **HTML5** – for structuring the web content
+- **CSS3** – for styling and responsive design
+- **JavaScript** – for interactivity (if used)
+- **Git** – for version control
 
-Open index.html in your browser.
+---
 
-Contributing
-We welcome contributions to improve NXT Delivery. Please fork the repository and submit pull requests.
+## 📦 Features
+
+- Fast and efficient item delivery service
+- Simple and modern user interface
+- Responsive design (mobile-friendly)
+- Deployed using GitHub Pages
+
+---
+
